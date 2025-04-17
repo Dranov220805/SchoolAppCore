@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Register SchoolContext with connection string
 builder.Services.AddDbContext<SchoolContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SchoolDBConnectionString")));
 
 
 builder.Services.AddRazorPages();
